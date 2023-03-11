@@ -57,7 +57,7 @@ model Recipe {
   id          String @id @default(cuid())
   name        String
   description String
-  image       String
+  image       String?
   author      User   @relation(fields: [authorId], references: [id])
   authorId    String
 }
