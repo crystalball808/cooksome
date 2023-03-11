@@ -1,8 +1,8 @@
-import type { inferAsyncReturnType } from "@trpc/server";
-import type { createSolidAPIHandlerContext } from "solid-start-trpc";
-import { prisma } from "~/server/db/client";
-import { getSession } from "@auth/solid-start";
-import { authOpts } from "~/routes/api/auth/[...solidauth]";
+import type { inferAsyncReturnType } from '@trpc/server';
+import type { createSolidAPIHandlerContext } from 'solid-start-trpc';
+import { prisma } from '~/server/db/client';
+import { getSession } from '@auth/solid-start';
+import { authOpts } from '~/routes/api/auth/[...solidauth]';
 export const createContextInner = async (
   opts: createSolidAPIHandlerContext
 ) => {
@@ -10,7 +10,7 @@ export const createContextInner = async (
   return {
     ...opts,
     prisma,
-    session,
+    session
   };
 };
 export const createContext = async (opts: createSolidAPIHandlerContext) => {

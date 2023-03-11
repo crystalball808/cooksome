@@ -12,17 +12,17 @@ export const authOpts: SolidAuthConfig = {
         session.user.id = user.id
       }
       return session
-    },
+    }
   },
   adapter: PrismaAdapter(prisma) as Adapter,
   providers: [
     // @ts-expect-error Types Issue
     Discord({
       clientId: serverEnv.DISCORD_ID,
-      clientSecret: serverEnv.DISCORD_SECRET,
-    }),
+      clientSecret: serverEnv.DISCORD_SECRET
+    })
   ],
-  debug: false,
+  debug: false
 }
 
 export const { GET, POST } = SolidAuth(authOpts)

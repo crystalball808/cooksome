@@ -1,7 +1,7 @@
 // @refresh reload
-import "./root.css";
+import './root.css';
 
-import { Suspense } from "solid-js";
+import { Suspense } from 'solid-js';
 import {
   Body,
   ErrorBoundary,
@@ -12,9 +12,9 @@ import {
   Routes,
   Scripts,
   Title,
-  Link,
-} from "solid-start";
-import { trpc, queryClient } from "~/utils/trpc";
+  Link
+} from 'solid-start';
+import { trpc, queryClient } from '~/utils/trpc';
 
 export default function Root() {
   return (
