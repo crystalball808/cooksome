@@ -10,21 +10,25 @@ export const TopBar: VoidComponent = () => {
             <A
               href="/"
               activeClass="text-amber-800"
-              class="text-lg font-bold ml-2 text-white"
+              inactiveClass="text-white"
+              class="text-lg font-bold ml-2"
+              end
             >
               Home
             </A>
             <A
               href="/recipes"
               activeClass="text-amber-800"
-              class="text-lg font-bold ml-2 text-white"
+              inactiveClass="text-white"
+              class="text-lg font-bold ml-2"
             >
               Recipes
             </A>
             <A
               href="/create-new"
               activeClass="text-amber-800"
-              class="text-lg font-bold ml-2 text-white"
+              inactiveClass="text-white"
+              class="text-lg font-bold ml-2"
             >
               Create
             </A>
