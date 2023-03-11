@@ -11,6 +11,7 @@
   "rules": {
     "@typescript-eslint/consistent-type-imports": "warn",
     "comma-dangle": ["error", "never"],
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"]
   }
 }
