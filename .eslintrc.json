@@ -12,6 +12,7 @@
     "@typescript-eslint/consistent-type-imports": "warn",
     "comma-dangle": ["error", "never"],
     "quotes": ["error", "single"],
-    "jsx-quotes": ["error", "prefer-double"]
+    "jsx-quotes": ["error", "prefer-double"],
+    "semi": ["error", "never"]
   }
 }

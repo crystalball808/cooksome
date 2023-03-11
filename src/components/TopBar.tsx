@@ -1,6 +1,7 @@
-import { A } from 'solid-start';
+import { type VoidComponent } from 'solid-js'
+import { A } from 'solid-start'
 
-export function TopBar() {
+export const TopBar: VoidComponent = () => {
   return (
     <header class="sticky top-0 bg-amber-500 h-10 shadow-md flex items-center">
       <nav>
@@ -20,9 +21,16 @@ export function TopBar() {
             >
               Recipes
             </A>
+            <A
+              href="/create-new"
+              activeClass="text-amber-800"
+              class="text-lg font-bold ml-2 text-white"
+            >
+              Create
+            </A>
           </li>
         </ul>
       </nav>
     </header>
-  );
+  )
 }
