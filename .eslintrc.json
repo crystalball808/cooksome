@@ -1,0 +1,18 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "plugin:solid/typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "semi": ["error", "never"]
+  }
+}
