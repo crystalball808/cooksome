@@ -1,8 +1,10 @@
 import { router } from '../utils'
 import example from './example'
+import recipe from './recipe'
 
 export const appRouter = router({
-  example
+  example,
+  recipe
 })
 
-export type IAppRouter = typeof appRouter;
+export type IAppRouter = typeof appRouter
