@@ -2,10 +2,8 @@ import { Suspense, type VoidComponent } from 'solid-js'
 import { A } from 'solid-start'
 import { trpc } from '~/utils/trpc'
 import { signOut, signIn } from '@auth/solid-start/client'
-import { createServerData$ } from 'solid-start/server'
-import { getSession } from '@auth/solid-start'
-import { authOpts } from './api/auth/[...solidauth]'
 import { TopBar } from '~/components/TopBar'
+import { createSession } from '~/logic/auth'
 
 const Home: VoidComponent = () => {
   const hello = trpc.example.hello.useQuery(() => ({ name: 'from tRPC' }))
@@ -73,10 +71,4 @@ const AuthShowcase: VoidComponent = () => {
       </button>
     </div>
   )
-}
-
-const createSession = () => {
-  return createServerData$(async (_, event) => {
-    return await getSession(event.request, authOpts)
-  })
 }
