@@ -39,6 +39,7 @@ const Home: VoidComponent = () => {
             </A>
           </div>
           <div class="flex flex-col items-center gap-2">
+            {hello.isLoading && <p>isLoading</p>}
             <p class="text-2xl text-white">
               {hello.data ?? 'Loading tRPC query'}
             </p>

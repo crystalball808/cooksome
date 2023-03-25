@@ -1,7 +1,10 @@
 import { z } from 'zod'
-import { router, protectedProcedure } from '../utils'
+import { router, protectedProcedure, procedure } from '../utils'
 
 export default router({
+  all: procedure.query(({ ctx }) => {
+    return ctx.prisma.recipe.findMany()
+  }),
   createNew: protectedProcedure
     .input(
       z.object({
